@@ -1,9 +1,9 @@
 from pygame import mixer
-from ._base import Effect
+from ._base import EffectsBase
 from ..modificators import *
 
 
-class VolumeOscillator(Effect):
+class VolumeOscillator(EffectsBase):
     name = 'VolumeOscillator'
 
     def __init__(self, path, loop, step=0.05):

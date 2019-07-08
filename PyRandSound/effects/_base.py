@@ -4,25 +4,26 @@ from pygame import mixer
 class EffectsBase(object):
     name = None
 
-    def __init__(self, path, loop):
+    def __init__(self, path, loop=False):
         self.path = path
-        self.loop = False
+        self.loop = loop
         self.channel = None
 
     def play(self):
         raise Exception("Not implemented method")
 
-    def set_ready(self, force=False):
+    def set_ready(self, force=True):
+        print(force)
         if not mixer.get_init():
-            pygame.mixer.init()
-        self.channel = mixer.find_channel(force=force)
+            mixer.init()
+        self.channel = mixer.find_channel()
 
     def continue_looping(self):
         if self.loop:
             if type(self.loop) is int:
-                if self.loop == 1:
+                if self.loop <= 1:
                     self.loop = False
                 else:
                     self.loop -= 1
-                return True
+            return True
         return False
