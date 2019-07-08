@@ -1,5 +1,6 @@
 from .effects._base import Effect
 
+
 class Player(object):
     effects = []
 
