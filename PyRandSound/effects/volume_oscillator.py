@@ -25,5 +25,5 @@ class VolumeOscillator(EffectsBase):
                 x = x + self.step
             time.sleep(self.step)
             self.channel.set_volume(x)
-        if self.continue_loop():
+        if self.continue_looping():
             self.play()
