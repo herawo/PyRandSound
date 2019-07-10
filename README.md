@@ -2,6 +2,7 @@
 Student projet to generate random sounds using the Pygame Mixer
 
 ## Installation
+apt-get install pip
 pip install virtualenv
 virtualenv <nom_de_lenv>  
 pip install pygame nose  
@@ -11,5 +12,5 @@ source <nom_de_lenv>/bin/activate
 
 
 ## Run test
-cd PyRandSound  
+cd test/PyRandSound  
 nosetest  
