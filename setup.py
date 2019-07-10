@@ -11,7 +11,7 @@ CLASSIFIERS = [
 ]
 
 setuptools.setup(
-    name="pypeertube",
+    name="PyRandSound",
     version=__version__,
     author="Webu",
     author_email="clemalex20@gmail.com",
