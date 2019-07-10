@@ -12,5 +12,6 @@ def test_random_timing():
 
 def test_volume_oscilating():
     effect3 = VolumeOscillator('sounds/sound4.wav', True)
+    player = Player()
     player.add_effect(effect3)
     player.play()
