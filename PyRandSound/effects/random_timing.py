@@ -10,7 +10,9 @@ class RandomTiming(EffectsBase):
 
     def __init__(self, path, loop, timing=[1, 10]):
         super(RandomTiming, self).__init__(path, loop)
-        self.timing = timing
+        self.timing = []
+        self.timing[0] = timing[0] + sound.get_length()
+        self.timing[1] = timing[1] + sound.get_length()
 
     def play(self):
         rand = random.randrange(self.timing[0], self.timing[1])
@@ -21,7 +23,6 @@ class RandomTiming(EffectsBase):
     def _play_sound(self):
         sound = mixer.Sound(self.path)
         self.channel.play(sound)
-        time.sleep(sound.get_length())
         if self.continue_looping():
             self.play()
         return

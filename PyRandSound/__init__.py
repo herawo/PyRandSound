@@ -1,2 +1,2 @@
 __name__ = "PyRandSound"
-__version__ = '0.0.1~WIP'
+__version__ = '0.0.2~WIP'

@@ -13,10 +13,10 @@ class EffectsBase(object):
         raise Exception("Not implemented method")
 
     def set_ready(self, force=True):
-        print(force)
         if not mixer.get_init():
             mixer.init()
         self.channel = mixer.find_channel()
+        print(self.channel)
 
     def continue_looping(self):
         if self.loop:
