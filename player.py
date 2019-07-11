@@ -3,7 +3,7 @@ from .effects._base import EffectsBase
 
 class Player(object):
     effects = []
-    channels = [0,1,2,3,4]
+    channels = [0,1,2,3,4,5,6]
 
     def play(self):
         if not self._is_ready():
@@ -14,6 +14,11 @@ class Player(object):
             effect.play()
 
     def add_effect(self, effects):
+        """
+        args:
+            effects: Effect or List, a list of Effect objects, can also be a
+                     lonely Effect object
+        """
         # Must supply a list of effect,
         # if not convert value into a single value list
         try:
