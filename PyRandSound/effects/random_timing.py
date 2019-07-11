@@ -10,8 +10,7 @@ class RandomTiming(EffectsBase):
 
     def __init__(self, path, loop, timing=[1, 10]):
         super(RandomTiming, self).__init__(path, loop)
-        self.timing[0] = timing[0] + sound.get_length()
-        self.timing[1] = timing[1] + sound.get_length()
+        self.timing = timing
 
     def play(self):
         rand = random.randrange(self.timing[0], self.timing[1])
